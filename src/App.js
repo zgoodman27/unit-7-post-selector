@@ -1,8 +1,15 @@
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Display from "./Display.jsx";
+import List from "./List.jsx";
 
 function App() {
+  const [postId, setPostId] = useState(null);
   return (
-    <>App</>
+    <div className="App">
+      <List setPostId={setPostId} />
+      <Display postId={postId} />
+    </div>
   );
 }
 
